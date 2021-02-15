@@ -45,8 +45,8 @@ pipeline
             agent any
             steps
             {
-                sh '''ssh \'318356@10.10.196.130\' docker pull localhost:5000/android_test_build:v2'''
-                sh '''ssh \'318356@10.10.196.130\' docker run --name Build -v volAndroidTest:/src localhost:5000/android_test_build:v2'''
+                sh '''ssh \'318356@10.10.196.130\' docker pull localhost:5000/android_test_build:v5'''
+                sh '''ssh \'318356@10.10.196.130\' docker run --name Build -v volAndroidTest:/src localhost:5000/android_test_build:v5'''
             }
         }
         
@@ -58,8 +58,8 @@ pipeline
             steps
             {
                  echo "********Test Runner***********"
-               sh '''ssh \'318356@10.10.196.130\' docker pull localhost:5000/android_test_run:v1'''
-             // sh '''ssh \'318356@10.10.196.130\' docker run --name Runner -v volAndroidTest:/src localhost:5000/android_test_run:v1'''
+               sh '''ssh \'318356@10.10.196.130\' docker pull localhost:5000/android_test_run:v5'''
+             // sh '''ssh \'318356@10.10.196.130\' docker run --name Runner -v volAndroidTest:/src localhost:5000/android_test_run:v5'''
             }
         }
         /*
