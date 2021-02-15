@@ -68,6 +68,7 @@ pipeline
             agent any
             steps
             {
+		     echo "********Test Runner***********"
                 sh '''ssh \'318356@10.10.196.130\' /home/318356/copy_xml.sh'''
                 step([$class: 'Publisher'])
             }
