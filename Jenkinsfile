@@ -59,10 +59,10 @@ pipeline
             {
                  echo "********Test Runner***********"
                sh '''ssh \'318356@10.10.196.130\' docker pull localhost:5000/android_test_run:v5'''
-             // sh '''ssh \'318356@10.10.196.130\' docker run --name Runner -v volAndroidTest:/src localhost:5000/android_test_run:v5'''
+               sh '''ssh \'318356@10.10.196.130\' docker run --name Runner -v volAndroidTest:/src localhost:5000/android_test_run:v5'''
             }
         }
-        /*
+        
         stage('Publishing Result')
         {
             agent any
@@ -73,7 +73,7 @@ pipeline
             }
             
         }
-        */
+        
         
         stage('Removal of build and volumes')
         {   
@@ -82,9 +82,9 @@ pipeline
             {
                 sh '''ssh \'318356@10.10.196.130\' docker stop Build'''
                 sh '''ssh \'318356@10.10.196.130\' docker rm Build'''
-              //  sh '''ssh \'318356@10.10.196.130\' docker stop Runner'''
-               // sh '''ssh \'318356@10.10.196.130\' docker rm Runner'''
-				sh '''ssh \'318356@10.10.196.130\' docker volume rm -f volAndroidTest'''
+                sh '''ssh \'318356@10.10.196.130\' docker stop Runner'''
+                sh '''ssh \'318356@10.10.196.130\' docker rm Runner'''
+		sh '''ssh \'318356@10.10.196.130\' docker volume rm -f volAndroidTest'''
             }
         }
     }
