@@ -193,18 +193,18 @@ public class DP_Home_Screen
 	  			((String) (dbUtils.dbGetElement(document, "LoginScreen", "Button" , "e14")));
 	  el4.click();
 	  MobileElement el5 = (MobileElement) driver.findElementById
-			  				("us.drpad.drpadapp:id/imgAddPatient");
+			  				((String) (dbUtils.dbGetElement(document, "LoginScreen", "Button" , "e15")));
 	  el5.click();
 	  MobileElement el6 = (MobileElement) driver.findElementById
-			  				("us.drpad.drpadapp:id/edt_first_name");
+			  				((String) (dbUtils.dbGetElement(document, "LoginScreen", "Button" , "e16")));
 	  el6.sendKeys("Test");
 	  MobileElement el7 = (MobileElement) driver.findElementById
-			  				("us.drpad.drpadapp:id/edt_lastname");
+			  				((String) (dbUtils.dbGetElement(document, "LoginScreen", "Button" , "e17")));
 	  el7.sendKeys("01");
 	  screenshotLib.captureScreenshot("DP_Home_Screen_TC_1", driver);
 
 	  MobileElement el8 = (MobileElement) driver.findElementById
-			  					("us.drpad.drpadapp:id/btn_cancel");
+			  					((String) (dbUtils.dbGetElement(document, "LoginScreen", "Button" , "e18")));
 	  el8.click();
 	  screenshotLib.captureScreenshot("DP_Home_Screen_TC_1_Complete", driver);
   }
