@@ -154,8 +154,10 @@ public class DP_Home_Screen
   				dependsOnMethods = {"DP_Home_Screen_TC_1"})
   public void DP_Home_Screen_TC_2(String F_name, String L_name) 
   {
+//	  MobileElement el5 = (MobileElement) driver.findElementById
+//			  					("us.drpad.drpadapp:id/imgAddPatient");
 	  MobileElement el5 = (MobileElement) driver.findElementById
-			  					("us.drpad.drpadapp:id/imgAddPatient");
+			  					((String) (dbUtils.dbGetElement(document, "AddPatientScreen", "Button" , "e15")));
 	  el5.click();
 	  MobileElement el26 = (MobileElement) driver.findElementById
 			  					("us.drpad.drpadapp:id/edt_first_name");
