@@ -1,3 +1,1 @@
-This project is to demo the android test capabilities
-
-This should contain the custom library
+This folder contains the containerised test automation code of android application Dr Pad. 
