@@ -1,1 +1,3 @@
 To include jar in this folder
+The jar file location is as follows: 
+    https://docs.fresco.me/preview/29319950
