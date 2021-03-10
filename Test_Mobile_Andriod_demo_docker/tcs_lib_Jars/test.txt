@@ -1,1 +1,4 @@
 To get the jar file (content of the pom.xml)
+
+The jar file location is as follows: 
+    https://docs.fresco.me/preview/29319950
