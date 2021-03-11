@@ -47,8 +47,8 @@ public class DP_Home_Screen
 	  try
 		{
 		  	
-			ExcelUtils.setExcelFile("/home/318356/android_eclipse/AndroidTest/Test_Mobile_Android_demo_eclipse/Android_Demo/src/test/java/test_data/Test.xlsx","Sheet3");			
-			Object[][] testObjArray = ExcelUtils.getTableArray("/home/318356/android_eclipse/AndroidTest/Test_Mobile_Android_demo_eclipse/Android_Demo/src/test/java/test_data/Test.xlsx","Sheet3");		
+			ExcelUtils.setExcelFile("/src/AndroidTest/Test_Mobile_Andriod_demo_docker/src/test/java/test_data/Test.xlsx","Sheet3");			
+			Object[][] testObjArray = ExcelUtils.getTableArray("/src/AndroidTest/Test_Mobile_Andriod_demo_docker/src/test/java/test_data/Test.xlsx","Sheet3");		
 			return (testObjArray);	
 		}
 		
@@ -68,8 +68,8 @@ public class DP_Home_Screen
 	  try
 		{
 		  	
-			ExcelUtils.setExcelFile("/home/318356/android_eclipse/AndroidTest/Test_Mobile_Android_demo_eclipse/Android_Demo/src/test/java/test_data/Test.xlsx","PatientMetaData test");			
-			Object[][] testObjArray = ExcelUtils.getTableArray("/home/318356/android_eclipse/AndroidTest/Test_Mobile_Android_demo_eclipse/Android_Demo/src/test/java/test_data/Test.xlsx","PatientMetaData test");		
+			ExcelUtils.setExcelFile("/src/AndroidTest/Test_Mobile_Andriod_demo_docker/src/test/java/test_data/Test.xlsx","PatientMetaData test");			
+			Object[][] testObjArray = ExcelUtils.getTableArray("/src/AndroidTest/Test_Mobile_Andriod_demo_docker/src/test/java/test_data/Test.xlsx","PatientMetaData test");		
 			return (testObjArray);	
 		}
 		
@@ -546,7 +546,7 @@ public class DP_Home_Screen
 	  try
 		{
 		  Map<String, String> map;
-		  String path = "/home/318356/android_eclipse/AndroidTest/Test_Mobile_Android_demo_eclipse/Android_Demo/src/test/java/utility/test.yaml";
+		  String path = "/src/AndroidTest/Test_Mobile_Andriod_demo_docker/src/test/java/utility/test.yaml";
 		
 		  map = yamlLib.yamlRead(path);
 		  driver = applicationLaunchLib.appLaunch(map.get("path_config"),map.get("app_id"));	
