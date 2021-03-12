@@ -33,13 +33,17 @@ import static org.testng.Assert.assertEquals;
 
 import java.util.Map;
 
+import tcsLib.dbUtils;
+import org.json.simple.JSONObject;
+import com.mongodb.DB;
+
 /*Below class contains the test scripts for the Home screen*/
 /*TestNG settings for run all the defined test cases*/
 public class DP_Home_Screen  
 {
 	static int count_1 = 0;
 	public AppiumDriver<MobileElement> driver;
-	
+	JSONObject document;
 	/*Data provider with excel settings in the name of PatientData*/
 	@DataProvider
 	public Object[][] PatientData() 
@@ -494,20 +498,20 @@ public class DP_Home_Screen
   {
 
 	  MobileElement el4 = (MobileElement) driver.findElementById
-			  			("us.drpad.drpadapp:id/lv_patient");
+			  			(dbUtils.dbGetElement(document, "HomeScreen", "Button" , "el4"));
 	  el4.click();
 	  MobileElement el5 = (MobileElement) driver.findElementById
-			  				("us.drpad.drpadapp:id/imgAddPatient");
+			  				(dbUtils.dbGetElement(document, "HomeScreen", "Button" , "el5"));
 	  el5.click();
 	  MobileElement el6 = (MobileElement) driver.findElementById
-			  				("us.drpad.drpadapp:id/edt_first_name");
+			  				(dbUtils.dbGetElement(document, "HomeScreen", "Button" , "el6"));
 	  el6.sendKeys("Test");
 	  MobileElement el7 = (MobileElement) driver.findElementById
-			  				("us.drpad.drpadapp:id/edt_lastname");
+			  				(dbUtils.dbGetElement(document, "HomeScreen", "Button" , "el7"));
 	  el7.sendKeys("01");
 
 	  MobileElement el8 = (MobileElement) driver.findElementById
-			  					("us.drpad.drpadapp:id/btn_cancel");
+			  					(dbUtils.dbGetElement(document, "HomeScreen", "Button" , "el8"));
 	  el8.click();
 	  
 	  //Need to check the screen verification call
@@ -547,7 +551,14 @@ public class DP_Home_Screen
 		{
 		  Map<String, String> map;
 		  String path = "/src/AndroidTest/Test_Mobile_Andriod_demo_docker/src/test/java/utility/test.yaml";
-		
+		  DB db = dbUtils.dbGetDatabase("10.10.196.130", 27017,"MobileAppElementsRepo");
+		  System.out.println("DB:"+ db);
+		  
+		  document = dbUtils.dbGetDoument(db,"App1",1, "/src/AndroidTest/Test_Mobile_Andriod_demo_docker/Android_Demo/src/test/java/utility/json_array_output.json");
+		  System.out.println("document:"+ document);
+		  String e14_element = dbUtils.dbGetElement(document, "HomeScreen", "Button" , "el4");
+		  System.out.println("element id :"+ e14_element);
+		  
 		  map = yamlLib.yamlRead(path);
 		  driver = applicationLaunchLib.appLaunch(map.get("path_config"),map.get("app_id"));	
 		  System.out.println("B4 Test");
