@@ -554,7 +554,7 @@ public class DP_Home_Screen
 		  DB db = dbUtils.dbGetDatabase("10.10.196.130", 27017,"MobileAppElementsRepo");
 		  System.out.println("DB:"+ db);
 		  
-		  document = dbUtils.dbGetDoument(db,"App1",1, "/src/AndroidTest/Test_Mobile_Andriod_demo_docker/Android_Demo/src/test/java/utility/json_array_output.json");
+		  document = dbUtils.dbGetDoument(db,"App1",1, "/src/AndroidTest/Test_Mobile_Andriod_demo_docker/src/test/java/utility/json_array_output.json");
 		  System.out.println("document:"+ document);
 		  String e14_element = dbUtils.dbGetElement(document, "HomeScreen", "Button" , "el4");
 		  System.out.println("element id :"+ e14_element);
