@@ -46,7 +46,7 @@ pipeline
             steps
             {
                 sh '''ssh \'318356@10.10.196.130\' docker pull localhost:5000/android_test_build:v5'''
-                sh '''ssh \'318356@10.10.196.130\' docker run --name Build -v volAndroidTest:/src localhost:5000/android_test_build:v5'''
+                sh '''ssh \'318356@10.10.196.130\' docker run --name Build --network="host" -p 27017:27017 -v volAndroidTest:/src localhost:5000/android_test_build:v5'''
             }
         }
         
@@ -59,7 +59,7 @@ pipeline
             {
                  echo "********Test Runner***********"
                sh '''ssh \'318356@10.10.196.130\' docker pull localhost:5000/android_test_run:v5'''
-               sh '''ssh \'318356@10.10.196.130\' docker run --name Runner -p 27017 -v volAndroidTest:/src localhost:5000/android_test_run:v5'''
+               sh '''ssh \'318356@10.10.196.130\' docker run --name Runner --network="host" -p 27017:27017 -v volAndroidTest:/src localhost:5000/android_test_run:v5'''
             }
         }
         
