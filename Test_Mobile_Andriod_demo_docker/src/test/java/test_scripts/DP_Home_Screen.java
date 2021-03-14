@@ -101,37 +101,37 @@ public class DP_Home_Screen
 
 	  @Test(priority = 5, description = "Add Patient screen testing "
 	  								+ "with parameterized testing",
-	  								enabled = true)  //dependsOnMethods = {"DP_Home_Screen_TC_4", "DP_Home_Screen_TC_5"}
+	  								enabled = false)  //dependsOnMethods = {"DP_Home_Screen_TC_4", "DP_Home_Screen_TC_5"}
 	  public void DP_Home_Screen_TC_5()
     {
 		  count_1++;
 		  MobileElement el5 = (MobileElement) driver.findElementById
-									("us.drpad.drpadapp:id/imgAddPatient");
+									("us.drpad.drpadapp:id/lv_patient");
 		  el5.click();
 		  MobileElement el15 = (MobileElement) driver.findElementById
-					(dbUtils.dbGetElement(document, "HomeScreen", "Button" , "el15"));
+					("us.drpad.drpadapp:id/imgAddPatient");
 		  el15.click();
 		  MobileElement el26 = (MobileElement) driver.findElementById
-					(dbUtils.dbGetElement(document, "HomeScreen", "Button" , "el26"));
+					("us.drpad.drpadapp:id/edt_first_name");
 		  el26.sendKeys("Test");
 		  MobileElement el27 = (MobileElement) driver.findElementById
-								(dbUtils.dbGetElement(document, "HomeScreen", "Button" , "el27"));		  
+								("us.drpad.drpadapp:id/edt_lastname");		  
 		  String L_name = String.valueOf(count_1);
 		  el27.sendKeys(L_name);
 		
 		  MobileElement el8 = (MobileElement) driver.findElementById
-							(dbUtils.dbGetElement(document, "HomeScreen", "Button" , "el8"));
+							("us.drpad.drpadapp:id/btn_done");
 		  el8.click();
 
-		  MobileElement el04 = (MobileElement) driver.findElementById(dbUtils.dbGetElement(document, "HomeScreen", "Button" , "el04"));
+		  MobileElement el04 = (MobileElement) driver.findElementById("us.drpad.drpadapp:id/ic_clinic");
 		  el04.click();
 		  el04.click();
-		  MobileElement el2 = (MobileElement) driver.findElementById(dbUtils.dbGetElement(document, "HomeScreen", "Button" , "el2"));
+		  MobileElement el2 = (MobileElement) driver.findElementById("us.drpad.drpadapp:id/txt_home");
 		  el2.click();
 		  
-		  MobileElement el1 = (MobileElement) driver.findElementById(dbUtils.dbGetElement(document, "HomeScreen", "Button" , "el1"));
+		  MobileElement el1 = (MobileElement) driver.findElementById("us.drpad.drpadapp:id/lv_addappoinment");
 		  el1.click();
-		  MobileElement el12 = (MobileElement) driver.findElementById(dbUtils.dbGetElement(document, "HomeScreen", "Button" , "el12"));
+		  MobileElement el12 = (MobileElement) driver.findElementById("us.drpad.drpadapp:id/edt_search");
 		  el12.click();
 		  String search_test = "Test"+" "+L_name;
 		  el12.sendKeys(search_test);
@@ -151,7 +151,7 @@ public class DP_Home_Screen
 	 * 				as per the SRS document
 	 *************************************************************************/
 	  @Test(priority = 4, dataProvider = "PatientMetaData", description = "Home screen testing with priority and "
-  		+ "description facility", enabled = true)
+  		+ "description facility", enabled = false)
     public void DP_Home_Screen_TC_4(String sDOB, String sGender, 
   						String sFather_Name, String sMother_Name,
   						String sAddr, String sPh, String sAPh, String sEmail,
@@ -163,25 +163,25 @@ public class DP_Home_Screen
 					("us.drpad.drpadapp:id/lv_patient");
 		  el5.click();
 		  MobileElement el15 = (MobileElement) driver.findElementById
-	  				(dbUtils.dbGetElement(document, "PatientMetaData", "Button" , "el15"));
+	  				("us.drpad.drpadapp:id/imgAddPatient");
 		  el15.click();
 		  MobileElement el26 = (MobileElement) driver.findElementById
-					(dbUtils.dbGetElement(document, "PatientMetaData", "Button" , "el26"));
+					("us.drpad.drpadapp:id/edt_first_name");
 		  el26.sendKeys("Test");
 		  MobileElement el27 = (MobileElement) driver.findElementById
-								(dbUtils.dbGetElement(document, "PatientMetaData", "Button" , "el27"));		  
+								("us.drpad.drpadapp:id/edt_lastname");		  
 		  String L_name = String.valueOf(count_1);
 		  el27.sendKeys(L_name);
 		
 		  MobileElement el8 = (MobileElement) driver.findElementById
-							(dbUtils.dbGetElement(document, "PatientMetaData", "Button" , "el8"));
+							("us.drpad.drpadapp:id/btn_done");
 		  el8.click();
 
 		  MobileElement el1 = (MobileElement) driver.findElementById
-				  				(dbUtils.dbGetElement(document, "PatientMetaData", "Button" , "el1"));
+				  				("us.drpad.drpadapp:id/txt_title_age");
 		  el1.click();
 		  MobileElement el12 = (MobileElement) driver.findElementById
-				  				(dbUtils.dbGetElement(document, "PatientMetaData", "Button" , "el12"));
+				  				("us.drpad.drpadapp:id/edt_dob");
 		  el12.sendKeys(sDOB);
 		  System.out.println("sDOB: "+sDOB);
 		  if(sGender.equalsIgnoreCase("Male"))
@@ -192,53 +192,53 @@ public class DP_Home_Screen
 		  }
 		  else
 		  {
-			  MobileElement el1119 = (MobileElement) driver.findElementById
-					  				(dbUtils.dbGetElement(document, "PatientMetaData", "Button" , "el1119"));
-			  el1119.click();
+			  MobileElement el19 = (MobileElement) driver.findElementById
+					  				("us.drpad.drpadapp:id/rd_female");
+			  el19.click();
 		  }
 
 		  MobileElement el19 = (MobileElement) driver.findElementById
-				  				(dbUtils.dbGetElement(document, "PatientMetaData", "Button" , "el19"));
+				  				("us.drpad.drpadapp:id/edt_father_name");
 		  el19.sendKeys(sFather_Name);
 		  MobileElement el20 = (MobileElement) driver.findElementById
-				  			(dbUtils.dbGetElement(document, "PatientMetaData", "Button" , "el20"));
+				  			("us.drpad.drpadapp:id/edt_mother_name");
 		  el20.sendKeys(sMother_Name);
 		  MobileElement el21 = (MobileElement) driver.findElementById
-					(dbUtils.dbGetElement(document, "PatientMetaData", "Button" , "el21"));
+					("us.drpad.drpadapp:id/btn_save");
 		  el21.click();
 
 		  System.out.println("Contains:..... "+ driver.getPageSource().contains(sFather_Name));
 		  assertEquals(true, driver.getPageSource().contains(sFather_Name));
 		  
-		  MobileElement el01 = (MobileElement) driver.findElementById(dbUtils.dbGetElement(document, "PatientMetaData", "Button" , "el01"));
+		  MobileElement el01 = (MobileElement) driver.findElementById("us.drpad.drpadapp:id/txt_title_address");
 		  el01.click();
-		  MobileElement el02 = (MobileElement) driver.findElementById(dbUtils.dbGetElement(document, "PatientMetaData", "Button" , "el02"));
+		  MobileElement el02 = (MobileElement) driver.findElementById("us.drpad.drpadapp:id/edt_address");
 		  el02.click();
 		  el02.sendKeys(sAddr);
-		  MobileElement el113 = (MobileElement) driver.findElementById(dbUtils.dbGetElement(document, "PatientMetaData", "Button" , "el113"));
+		  MobileElement el113 = (MobileElement) driver.findElementById("us.drpad.drpadapp:id/edt_phone");
 		  el113.sendKeys(sPh);
-		  MobileElement el4 = (MobileElement) driver.findElementById(dbUtils.dbGetElement(document, "PatientMetaData", "Button" , "el4"));
+		  MobileElement el4 = (MobileElement) driver.findElementById("us.drpad.drpadapp:id/edt_alt_phone");
 		  el4.sendKeys(sAPh);
-		  MobileElement el115 = (MobileElement) driver.findElementById(dbUtils.dbGetElement(document, "PatientMetaData", "Button" , "el115"));
+		  MobileElement el115 = (MobileElement) driver.findElementById("us.drpad.drpadapp:id/edt_email");
 		  el115.sendKeys(sEmail);
-		  MobileElement el6 = (MobileElement) driver.findElementById(dbUtils.dbGetElement(document, "PatientMetaData", "Button" , "el6"));
+		  MobileElement el6 = (MobileElement) driver.findElementById("us.drpad.drpadapp:id/btn_save");
 		  el6.click();
-		  MobileElement el7 = (MobileElement) driver.findElementById(dbUtils.dbGetElement(document, "PatientMetaData", "Button" , "el7"));
+		  MobileElement el7 = (MobileElement) driver.findElementById("us.drpad.drpadapp:id/txt_title_motes");
 		  el7.click();
-		  MobileElement el18 = (MobileElement) driver.findElementById(dbUtils.dbGetElement(document, "PatientMetaData", "Button" , "el18"));
+		  MobileElement el18 = (MobileElement) driver.findElementById("us.drpad.drpadapp:id/edt_bloodtype");
 		  el18.sendKeys(sBT);
-		  MobileElement el9 = (MobileElement) driver.findElementById(dbUtils.dbGetElement(document, "PatientMetaData", "Button" , "el9"));
+		  MobileElement el9 = (MobileElement) driver.findElementById("us.drpad.drpadapp:id/edt_weight");
 		  el9.clear();
-		  MobileElement el10 = (MobileElement) driver.findElementById(dbUtils.dbGetElement(document, "PatientMetaData", "Button" , "el10"));
+		  MobileElement el10 = (MobileElement) driver.findElementById("us.drpad.drpadapp:id/edt_weight");
 		  el10.sendKeys(sWT);
-		  MobileElement el11 = (MobileElement) driver.findElementById(dbUtils.dbGetElement(document, "PatientMetaData", "Button" , "el11"));
+		  MobileElement el11 = (MobileElement) driver.findElementById("us.drpad.drpadapp:id/edt_hieght");
 		  el11.sendKeys(sHT);
-		  MobileElement el112 = (MobileElement) driver.findElementById(dbUtils.dbGetElement(document, "PatientMetaData", "Button" , "el112"));
+		  MobileElement el112 = (MobileElement) driver.findElementById("us.drpad.drpadapp:id/edt_company");
 		  el112.sendKeys(sCom);
-		  MobileElement el13 = (MobileElement) driver.findElementById(dbUtils.dbGetElement(document, "PatientMetaData", "Button" , "el13"));
+		  MobileElement el13 = (MobileElement) driver.findElementById("us.drpad.drpadapp:id/edt_occupation");
 		  el13.sendKeys(sOccu);
 		  driver.hideKeyboard();
-		  MobileElement el14 = (MobileElement) driver.findElementById(dbUtils.dbGetElement(document, "PatientMetaData", "Button" , "el14"));
+		  MobileElement el14 = (MobileElement) driver.findElementById("us.drpad.drpadapp:id/btn_save");
 		  el14.click();
 		  try
 		  {
@@ -364,59 +364,59 @@ public class DP_Home_Screen
 	 *************************************************************************/
 	  @Test(priority = 3, dataProvider = "PatientData", 
 			description = "Add Patient details screen testing "
-								+ "with dataProvider", enabled = true)
+								+ "with dataProvider", enabled = false)
 	  public void DP_Home_Screen_TC_3(String sDOB, String sGender, 
 			  			String sFather_Name, String sMother_Name) 
 	  {
 		  count_1++;
 		  MobileElement el5 = (MobileElement) driver.findElementById
-					(dbUtils.dbGetElement(document, "PatientDataScreen", "Button" , "el5"));
+					("us.drpad.drpadapp:id/lv_patient");
 		  el5.click();
 		  MobileElement el15 = (MobileElement) driver.findElementById
-	  				(dbUtils.dbGetElement(document, "PatientDataScreen", "Button" , "el15"));
+	  				("us.drpad.drpadapp:id/imgAddPatient");
 		  el15.click();
 
 		  MobileElement el126 = (MobileElement) driver.findElementById
-					(dbUtils.dbGetElement(document, "PatientDataScreen", "Button" , "el126"));
+					("us.drpad.drpadapp:id/edt_first_name");
 		  el126.sendKeys("Test");
 		  MobileElement el127 = (MobileElement) driver.findElementById
-								(dbUtils.dbGetElement(document, "PatientDataScreen", "Button" , "el127"));
+								("us.drpad.drpadapp:id/edt_lastname");
 		  String L_name = String.valueOf(count_1);
 		  el127.sendKeys(L_name);
 		
 		  MobileElement el118 = (MobileElement) driver.findElementById
-							(dbUtils.dbGetElement(document, "PatientDataScreen", "Button" , "el118"));
+							("us.drpad.drpadapp:id/btn_done");
 		  el118.click();
 		  MobileElement el1 = (MobileElement) driver.findElementById
-				  				(dbUtils.dbGetElement(document, "PatientDataScreen", "Button" , "el1"));
+				  				("us.drpad.drpadapp:id/txt_title_age");
 				  el1.click();
 
 		  MobileElement el112 = (MobileElement) driver.findElementById
-				  				(dbUtils.dbGetElement(document, "PatientDataScreen", "Button" , "el112"));
+				  				("us.drpad.drpadapp:id/edt_dob");
 		  el112.sendKeys(sDOB);
 		  System.out.println("sDOB: "+sDOB);
 		  if(sGender.equalsIgnoreCase("Male"))
 		  {
 			  MobileElement el1118 = (MobileElement) driver.findElementById
-					  					(dbUtils.dbGetElement(document, "PatientDataScreen", "Button" , "el1118"));
+					  					("us.drpad.drpadapp:id/rd_male");
 			  el1118.click();
 		  }
 		  else
 		  {
-			  MobileElement el1119 = (MobileElement) driver.findElementById
-					  				(dbUtils.dbGetElement(document, "PatientDataScreen", "Button" , "el1119"));
-			  el1119.click();
+			  MobileElement el19 = (MobileElement) driver.findElementById
+					  				("us.drpad.drpadapp:id/rd_female");
+			  el19.click();
 		  }
 
 		  MobileElement el19 = (MobileElement) driver.findElementById
-				  				(dbUtils.dbGetElement(document, "PatientDataScreen", "Button" , "el19"));
+				  				("us.drpad.drpadapp:id/edt_father_name");
 		  el19.sendKeys(sFather_Name);
 		  MobileElement el20 = (MobileElement) driver.findElementById
-				  			(dbUtils.dbGetElement(document, "PatientDataScreen", "Button" , "el20"));
+				  			("us.drpad.drpadapp:id/edt_mother_name");
 		  el20.sendKeys(sMother_Name);
 			  
 		  MobileElement el21 = (MobileElement) driver.findElementById
-				  					(dbUtils.dbGetElement(document, "PatientDataScreen", "Button" , "el21"));
+				  					("us.drpad.drpadapp:id/btn_save");
 		  el21.click();
 		  try
 		  {
@@ -451,32 +451,32 @@ public class DP_Home_Screen
   @Parameters({"F_name","L_name"})
   @Test(priority = 2, description = "Add Patient screen testing "
   								+ "with parameterized testing",
-  				dependsOnMethods = {"DP_Home_Screen_TC_1"}, enabled = true)
+  				dependsOnMethods = {"DP_Home_Screen_TC_1"}, enabled = false)
   public void DP_Home_Screen_TC_2(String F_name, String L_name) 
   {
 	  MobileElement el5 = (MobileElement) driver.findElementById
-			  					(dbUtils.dbGetElement(document, "AddPatientScreenTest", "Button" , "el5"));
+			  					("us.drpad.drpadapp:id/imgAddPatient");
 	  el5.click();
 	  MobileElement el26 = (MobileElement) driver.findElementById
-			  					(dbUtils.dbGetElement(document, "AddPatientScreenTest", "Button" , "el26"));
+			  					("us.drpad.drpadapp:id/edt_first_name");
 	  el26.sendKeys(F_name);
 	  MobileElement el27 = (MobileElement) driver.findElementById
-			  						(dbUtils.dbGetElement(document, "AddPatientScreenTest", "Button" , "el27"));
+			  						("us.drpad.drpadapp:id/edt_lastname");
 	  el27.sendKeys(L_name);
 
 	  MobileElement el8 = (MobileElement) driver.findElementById
-			  					(dbUtils.dbGetElement(document, "AddPatientScreenTest", "Button" , "el8"));
+			  					("us.drpad.drpadapp:id/btn_done");
 	  el8.click();
 	  
 	  MobileElement el9 = (MobileElement) driver.findElementById
-							(dbUtils.dbGetElement(document, "AddPatientScreenTest", "Button" , "el9"));
+							("us.drpad.drpadapp:id/ic_clinic");
 	  el9.click();
 	  
 	  assertEquals(true, driver.getPageSource().contains(F_name));
 	  assertEquals(true, driver.getPageSource().contains(L_name));
 
 	  el9.click();
-	  MobileElement el2 = (MobileElement) driver.findElementById(dbUtils.dbGetElement(document, "AddPatientScreenTest", "Button" , "el2"));
+	  MobileElement el2 = (MobileElement) driver.findElementById("us.drpad.drpadapp:id/txt_home");
 	  el2.click();
   }	
 
@@ -498,20 +498,20 @@ public class DP_Home_Screen
   {
 
 	  MobileElement el4 = (MobileElement) driver.findElementById
-			  			("us.drpad.drpadapp:id/lv_patient");
+			  			(dbUtils.dbGetElement(document, "HomeScreen", "Button" , "el4"));
 	  el4.click();
 	  MobileElement el5 = (MobileElement) driver.findElementById
-			  				(dbUtils.dbGetElement(document, "CloseTC4", "Button" , "el5"));
+			  				(dbUtils.dbGetElement(document, "HomeScreen", "Button" , "el5"));
 	  el5.click();
 	  MobileElement el6 = (MobileElement) driver.findElementById
-			  				("us.drpad.drpadapp:id/edt_first_name");
+			  				(dbUtils.dbGetElement(document, "HomeScreen", "Button" , "el6"));
 	  el6.sendKeys("Test");
 	  MobileElement el7 = (MobileElement) driver.findElementById
-			  				(dbUtils.dbGetElement(document, "CloseTC4", "Button" , "el7"));
+			  				(dbUtils.dbGetElement(document, "HomeScreen", "Button" , "el7"));
 	  el7.sendKeys("01");
 
 	  MobileElement el8 = (MobileElement) driver.findElementById
-			  					(dbUtils.dbGetElement(document, "CloseTC4", "Button" , "el8"));
+			  					(dbUtils.dbGetElement(document, "HomeScreen", "Button" , "el8"));
 	  el8.click();
 	  
 	  //Need to check the screen verification call
@@ -554,7 +554,7 @@ public class DP_Home_Screen
 		  DB db = dbUtils.dbGetDatabase("10.10.196.130", 27017,"MobileAppElementsRepo");
 		  System.out.println("DB:"+ db);
 		  
-		  document = dbUtils.dbGetDoument(db,"App1",1, "/src/AndroidTest/Test_Mobile_Andriod_demo_docker/src/test/java/utility/json_array_output.json");
+		  document = dbUtils.dbGetDoument(db,"App1",1, "/src/AndroidTest/Test_Mobile_Andriod_demo_docker/Android_Demo/src/test/java/utility/json_array_output.json");
 		  System.out.println("document:"+ document);
 		  String e14_element = dbUtils.dbGetElement(document, "HomeScreen", "Button" , "el4");
 		  System.out.println("element id :"+ e14_element);
