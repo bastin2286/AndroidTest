@@ -106,7 +106,7 @@ public class DP_Home_Screen
     {
 		  count_1++;
 		  MobileElement el5 = (MobileElement) driver.findElementById
-									(dbUtils.dbGetElement(document, "HomeScreen", "Button" , "el5"));
+									("us.drpad.drpadapp:id/imgAddPatient");
 		  el5.click();
 		  MobileElement el15 = (MobileElement) driver.findElementById
 					(dbUtils.dbGetElement(document, "HomeScreen", "Button" , "el15"));
@@ -160,7 +160,7 @@ public class DP_Home_Screen
     {
 		  count_1++;
 		  MobileElement el5 = (MobileElement) driver.findElementById
-					(dbUtils.dbGetElement(document, "PatientMetaData", "Button" , "el5"));
+					("us.drpad.drpadapp:id/lv_patient");
 		  el5.click();
 		  MobileElement el15 = (MobileElement) driver.findElementById
 	  				(dbUtils.dbGetElement(document, "PatientMetaData", "Button" , "el15"));
@@ -187,7 +187,7 @@ public class DP_Home_Screen
 		  if(sGender.equalsIgnoreCase("Male"))
 		  {
 			  MobileElement el18 = (MobileElement) driver.findElementById
-					  					(dbUtils.dbGetElement(document, "PatientMetaData", "Button" , "el18"));
+					  					("us.drpad.drpadapp:id/rd_male");
 			  el18.click();
 		  }
 		  else
@@ -498,13 +498,13 @@ public class DP_Home_Screen
   {
 
 	  MobileElement el4 = (MobileElement) driver.findElementById
-			  			(dbUtils.dbGetElement(document, "CloseTC4", "Button" , "el4"));
+			  			("us.drpad.drpadapp:id/lv_patient");
 	  el4.click();
 	  MobileElement el5 = (MobileElement) driver.findElementById
 			  				(dbUtils.dbGetElement(document, "CloseTC4", "Button" , "el5"));
 	  el5.click();
 	  MobileElement el6 = (MobileElement) driver.findElementById
-			  				(dbUtils.dbGetElement(document, "CloseTC4", "Button" , "el6"));
+			  				("us.drpad.drpadapp:id/edt_first_name");
 	  el6.sendKeys("Test");
 	  MobileElement el7 = (MobileElement) driver.findElementById
 			  				(dbUtils.dbGetElement(document, "CloseTC4", "Button" , "el7"));
