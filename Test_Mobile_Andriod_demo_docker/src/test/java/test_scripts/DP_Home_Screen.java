@@ -493,7 +493,7 @@ public class DP_Home_Screen
  * 				as per the SRS document
  *************************************************************************/
   @Test(priority = 1, description = "Home screen testing with priority and "
-  		+ "description facility", enabled = true)
+  		+ "description facility", enabled = false)
   public void DP_Home_Screen_TC_1() 
   {
 
