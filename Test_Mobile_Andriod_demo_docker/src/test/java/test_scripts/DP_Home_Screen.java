@@ -166,10 +166,10 @@ public class DP_Home_Screen
 	  				(dbUtils.dbGetElement(document, "PatientMetaData", "Button" , "el15"));
 		  el15.click();
 		  MobileElement el26 = (MobileElement) driver.findElementById
-					("us.drpad.drpadapp:id/edt_first_name");
+					(dbUtils.dbGetElement(document, "PatientMetaData", "Button" , "el26"));
 		  el26.sendKeys("Test");
 		  MobileElement el27 = (MobileElement) driver.findElementById
-								("us.drpad.drpadapp:id/edt_lastname");		  
+								(dbUtils.dbGetElement(document, "PatientMetaData", "Button" , "el27"));		  
 		  String L_name = String.valueOf(count_1);
 		  el27.sendKeys(L_name);
 		
