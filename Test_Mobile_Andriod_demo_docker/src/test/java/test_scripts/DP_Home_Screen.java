@@ -187,7 +187,7 @@ public class DP_Home_Screen
 		  if(sGender.equalsIgnoreCase("Male"))
 		  {
 			  MobileElement el18 = (MobileElement) driver.findElementById
-					  					(dbUtils.dbGetElement(document, "PatientMetaData", "Button" , "el18"));
+					  					("us.drpad.drpadapp:id/rd_male");
 			  el18.click();
 		  }
 		  else
