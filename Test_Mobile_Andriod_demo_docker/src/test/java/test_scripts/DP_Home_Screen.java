@@ -160,7 +160,7 @@ public class DP_Home_Screen
     {
 		  count_1++;
 		  MobileElement el5 = (MobileElement) driver.findElementById
-					("us.drpad.drpadapp:id/lv_patient");
+					(dbUtils.dbGetElement(document, "PatientMetaData", "Button" , "el5"));
 		  el5.click();
 		  MobileElement el15 = (MobileElement) driver.findElementById
 	  				(dbUtils.dbGetElement(document, "PatientMetaData", "Button" , "el15"));
