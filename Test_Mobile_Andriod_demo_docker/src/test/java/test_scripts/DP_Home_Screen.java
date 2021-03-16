@@ -477,7 +477,7 @@ public class DP_Home_Screen
 
 	  el10.click();
 	  MobileElement el11 = (MobileElement) driver.findElementById(dbUtils.dbGetElement(document, "AddPatientScreenTest", "Button" , "el11"));
-	  el2.click();
+	  el11.click();
   }	
 
 /**************************************************************************
@@ -502,7 +502,7 @@ public class DP_Home_Screen
 	  el01.click();
 	  MobileElement el02 = (MobileElement) driver.findElementById
 			  				(dbUtils.dbGetElement(document, "HomeScreen", "Button" , "el02"));
-	  el5.click();
+	  el02.click();
 	  MobileElement el03 = (MobileElement) driver.findElementById
 			  				(dbUtils.dbGetElement(document, "HomeScreen", "Button" , "el03"));
 	  el03.sendKeys("Test");
