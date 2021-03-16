@@ -174,20 +174,20 @@ public class DP_Home_Screen
 		  el27.sendKeys(L_name);
 		
 		  MobileElement el8 = (MobileElement) driver.findElementById
-							("us.drpad.drpadapp:id/btn_done");
+							(dbUtils.dbGetElement(document, "PatientMetaData", "Button" , "el8"));
 		  el8.click();
 
 		  MobileElement el1 = (MobileElement) driver.findElementById
-				  				("us.drpad.drpadapp:id/txt_title_age");
+				  				(dbUtils.dbGetElement(document, "PatientMetaData", "Button" , "el1"));
 		  el1.click();
 		  MobileElement el12 = (MobileElement) driver.findElementById
-				  				("us.drpad.drpadapp:id/edt_dob");
+				  				(dbUtils.dbGetElement(document, "PatientMetaData", "Button" , "el12"));
 		  el12.sendKeys(sDOB);
 		  System.out.println("sDOB: "+sDOB);
 		  if(sGender.equalsIgnoreCase("Male"))
 		  {
 			  MobileElement el18 = (MobileElement) driver.findElementById
-					  					("us.drpad.drpadapp:id/rd_male");
+					  					(dbUtils.dbGetElement(document, "PatientMetaData", "Button" , "el18"));
 			  el18.click();
 		  }
 		  else
